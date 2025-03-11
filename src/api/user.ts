@@ -1,4 +1,4 @@
-import { http } from "@/utils/http";
+import { base as http } from "@/utils/http";
 
 export type UserResult = {
   success: boolean;

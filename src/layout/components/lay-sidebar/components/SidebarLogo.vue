@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import logo from "@/assets/svg/logo.svg";
 import { getTopMenu } from "@/router/utils";
 import { useNav } from "@/layout/hooks/useNav";
 
@@ -19,8 +20,9 @@ const { title, getLogo } = useNav();
         class="sidebar-logo-link"
         :to="getTopMenu()?.path ?? '/'"
       >
-        <img :src="getLogo()" alt="logo" />
-        <span class="sidebar-title">{{ title }}</span>
+        <!-- <img :src="getLogo()" alt="logo" />
+        <span class="sidebar-title">{{ title }}</span> -->
+        <logo />
       </router-link>
       <router-link
         v-else
@@ -29,7 +31,8 @@ const { title, getLogo } = useNav();
         class="sidebar-logo-link"
         :to="getTopMenu()?.path ?? '/'"
       >
-        <img :src="getLogo()" alt="logo" />
+        <!-- <img :src="getLogo()" alt="logo" /> -->
+        <logo />
         <span class="sidebar-title">{{ title }}</span>
       </router-link>
     </transition>

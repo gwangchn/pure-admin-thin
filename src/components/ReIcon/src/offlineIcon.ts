@@ -7,8 +7,11 @@ import Lollipop from "@iconify-icons/ep/lollipop";
 import HomeFilled from "@iconify-icons/ep/home-filled";
 addIcon("ep:lollipop", Lollipop);
 addIcon("ep:home-filled", HomeFilled);
+
 // @iconify-icons/ri
 import Search from "@iconify-icons/ri/search-line";
 import InformationLine from "@iconify-icons/ri/information-line";
+import User3Line from "@iconify-icons/ri/user-3-line";
 addIcon("ri:search-line", Search);
 addIcon("ri:information-line", InformationLine);
+addIcon("user-3-line", User3Line);

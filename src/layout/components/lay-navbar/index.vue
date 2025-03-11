@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useNav } from "@/layout/hooks/useNav";
+import { useRenderIcon } from "@/components/ReIcon/src/hooks";
 import LaySearch from "../lay-search/index.vue";
 import LayNotice from "../lay-notice/index.vue";
 import LayNavMix from "../lay-sidebar/NavMix.vue";
@@ -41,15 +42,16 @@ const {
 
     <div v-if="layout === 'vertical'" class="vertical-header-right">
       <!-- 菜单搜索 -->
-      <LaySearch id="header-search" />
+      <!-- <LaySearch id="header-search" /> -->
       <!-- 全屏 -->
-      <LaySidebarFullScreen id="full-screen" />
+      <!-- <LaySidebarFullScreen id="full-screen" /> -->
       <!-- 消息通知 -->
-      <LayNotice id="header-notice" />
+      <!-- <LayNotice id="header-notice" /> -->
       <!-- 退出登录 -->
       <el-dropdown trigger="click">
         <span class="el-dropdown-link navbar-bg-hover select-none">
-          <img :src="userAvatar" :style="avatarsStyle" />
+          <!-- <img :src="userAvatar" :style="avatarsStyle" /> -->
+          <component :is="useRenderIcon('user-3-line')" class="avatar" />
           <p v-if="username" class="dark:text-white">{{ username }}</p>
         </span>
         <template #dropdown>
@@ -64,13 +66,13 @@ const {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-      <span
+      <!-- <span
         class="set-icon navbar-bg-hover"
         title="打开系统配置"
         @click="onPanel"
       >
         <IconifyIconOffline :icon="Setting" />
-      </span>
+      </span> -->
     </div>
   </div>
 </template>
@@ -113,6 +115,11 @@ const {
         width: 22px;
         height: 22px;
         border-radius: 50%;
+      }
+      .avatar {
+        margin-right: 5px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
