@@ -10,6 +10,8 @@ import { injectResponsiveStorage } from "@/utils/responsive";
 
 import Table from "@pureadmin/table";
 // import PureDescriptions from "@pureadmin/descriptions";
+import VxeUIAll from "vxe-pc-ui";
+import VxeUITable from "vxe-table";
 
 // 引入重置样式
 import "./style/reset.scss";
@@ -21,6 +23,7 @@ import "element-plus/dist/index.css";
 // 导入字体图标
 import "./assets/iconfont/iconfont.js";
 import "./assets/iconfont/iconfont.css";
+import "vxe-table/lib/style.css";
 
 const app = createApp(App);
 
@@ -57,7 +60,12 @@ getPlatformConfig(app).then(async config => {
   app.use(router);
   await router.isReady();
   injectResponsiveStorage(app, config);
-  app.use(MotionPlugin).use(useElementPlus).use(Table);
+  app
+    .use(MotionPlugin)
+    .use(useElementPlus)
+    .use(Table)
+    .use(VxeUIAll)
+    .use(VxeUITable);
   // .use(PureDescriptions)
   // .use(useEcharts);
   app.mount("#app");

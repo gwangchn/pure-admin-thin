@@ -12,6 +12,8 @@ addIcon("ep:home-filled", HomeFilled);
 import Search from "@iconify-icons/ri/search-line";
 import InformationLine from "@iconify-icons/ri/information-line";
 import User3Line from "@iconify-icons/ri/user-3-line";
+import AppsLine from "@iconify-icons/ri/apps-line";
 addIcon("ri:search-line", Search);
 addIcon("ri:information-line", InformationLine);
 addIcon("user-3-line", User3Line);
+addIcon("apps-line", AppsLine);
